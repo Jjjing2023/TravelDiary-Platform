@@ -71,7 +71,7 @@ function logoutUser() {
   // Update UI to show that the user is logged out
   document.getElementById("login-section").style.display = "block";
   document.getElementById("welcome-section").style.display = "none";
-  window.location.href = "/index.html"; // Redirect to the login page
+  window.location.href = "./"; // Redirect to the login page
 }
 
 // Function to display the new post form
@@ -355,11 +355,20 @@ function fetchPostDetails(postId) {
       const postDetailsSection = document.getElementById("post-details");
 
       postDetailsSection.innerHTML = `
-            <h2>${data.post.title}</h2>
-            <p>${data.post.description}</p>
-            <p>Location: ${data.post.location}</p>
+      <div id="post-detail" class="row">
+      <div
+          class="col-lg-4 post-image">
+          <img src="${data.post.image}" alt="post image: ${data.post.title}" />
+          </div>
+          <div
+          class="col-lg-8 post-content">
+          <h3>${data.post.title}</h3>
+                          <p>${data.post.description}</p>
+                          <div class="post-footer">
+                          <p>Location: ${data.post.location}</p>
             <p>Date: ${new Date(data.post.date).toLocaleDateString()}</p>
-            <img src="${data.post.image}" alt="post image: ${data.post.title}" />
+            </div>
+          </div>
         `;
     })
     .catch((error) => console.error("Error fetching post details:", error));

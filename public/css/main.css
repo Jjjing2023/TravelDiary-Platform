@@ -1,4 +1,16 @@
+/* front */
+.navbar-brand {
+  font-family: 'Sacramento', cursive;
+}
+h1 {
+  font-size: 5.625rem;
+  font-family: 'Sacramento', cursive;
+}
 
+
+/*--------------------------------------------------------------
+# Header Section
+--------------------------------------------------------------*/
 .header {
   overflow: hidden;
   background-color: black;
@@ -36,6 +48,18 @@ body, html {
   position: relative;
 }
 
+.hero-image-single {
+  background-image: linear-gradient(rgba(0, 85, 255, 0.5), rgba(0, 85, 255, 0.5)), url("/images/overlay-bg.jpg");
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 /* Place text in the middle of the image */
 .hero-text {
   text-align: center;
@@ -45,6 +69,11 @@ body, html {
   transform: translate(-50%, -50%);
   color: white;
 }
+
+
+/*--------------------------------------------------------------
+# login Section
+--------------------------------------------------------------*/
 
 #welcome-section p {
     color: white;
@@ -62,9 +91,17 @@ body, html {
     text-align:center;
 }
 
+
+/*--------------------------------------------------------------
+# New post Section
+--------------------------------------------------------------*/
 .new-post-section {
     margin: 50px 50px;
 }
+
+/*--------------------------------------------------------------
+# Posts list Section
+--------------------------------------------------------------*/
 
 #posts-list {
     text-align: center;
@@ -114,3 +151,25 @@ footer {
     color: #fff;
   }
   
+  /*--------------------------------------------------------------
+# Post Detail Section
+--------------------------------------------------------------*/
+#post-details {
+    margin: 50px 50px;
+}
+
+#post-details .post-image img {
+    max-height: 500px;
+    max-width: 380px;
+}
+
+#post-details .post-content h3{
+  font-size: 3.125rem;
+}
+
+#post-details .post-footer {
+  position: absolute;
+  bottom: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
