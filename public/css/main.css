@@ -1,0 +1,116 @@
+
+.header {
+  overflow: hidden;
+  background-color: black;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  opacity: 0.8;
+  z-index: 999;
+}
+
+.navbar {
+  background-color: black;
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/hero-bg.jpeg");
+
+  /* Set a specific height */
+  height: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#welcome-section p {
+    color: white;
+    margin-bottom: 0;
+}
+#welcome-section span {
+    margin-right: 5px;
+}
+
+#newpost-form > div.new-post-button {
+    text-align:center;
+}
+
+.new-post-title {
+    text-align:center;
+}
+
+.new-post-section {
+    margin: 50px 50px;
+}
+
+#posts-list {
+    text-align: center;
+    margin: 50px 50px;
+}
+#posts-list h2{
+    margin-bottom: 50px;
+}
+
+.each-post img{
+    width: 100%;
+    height: 200px;
+    max-height: 250px;    
+}
+
+.each-post .post-image {
+    margin: 15px 15px;
+}
+
+#posts-list .each-post{
+    margin: 10px 5px;
+}
+
+.post {
+    margin-bottom: 50px;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+    text-align: center;
+    color: #fff;
+    padding: 25px 0;
+    background: #0062d3;
+  }
+  
+  footer .copyright {
+    margin-bottom: 0.3rem;
+  }
+  
+  footer .credits {
+    margin-bottom: 0;
+  }
+  
+  footer .credits a {
+    color: #fff;
+  }
+  

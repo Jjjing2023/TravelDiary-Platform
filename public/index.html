@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel Diary</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous" />
+        <link href="css/main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- ======= Header ======= -->
+        <header class="header">
+
+            <section class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <a class="navbar-brand" href="">Travel Diary</a>
+                    <button class="navbar-toggler" type="button"
+                        data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#posts-list" onclick="window.location.reload(true);">All posts</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-md-auto" id="right-nav-item">
+                            <li class="login" id="login-section">
+                                <input type="email" id="login-email"
+                                    placeholder="Email">
+                                <input type="password" id="login-password"
+                                    placeholder="Password">
+                                <button class="btn btn-primary"
+                                    onclick="loginUser()">Login</button>
+                                <a
+                                    href="/signup.html"
+                                    target="_blank"
+                                    class="btn btn-primary">signup</a>
+                                <span id="login-message"></span>
+                            </li>
+                            <li id="welcome-section" style="display: none;">
+                                    <p>Welcome, <span id="username-display"></span><span>
+
+                                        <button id="my-posts-btn" onclick="fetchMyPosts()">My
+                                            Posts</button>
+                                        <button id="refresh" onclick="fetchMyPosts()">Refresh</button>
+                                        <a href="#newpost-section"><button id="newpost-btn">New Post</button></a>
+                                        <button id="logout-btn" onclick="logoutUser()">Log Out</button>
+                                    </span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </section>
+        </header>
+
+        <!-- ======= Hero Section ======= -->
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>Travel Diary</h1>
+                <p>To share your travel.</p>
+                <a class="btn btn-primary" href="#posts-list" onclick="window.location.reload(true);" role="button">All posts</a>
+            </div>
+        </div>
+
+        <section class="container">
+
+            <main>
+                <!-- User Login Section -->
+                <section id="user-login">
+                    <div id="newpost-section" style="display: none;" class="new-post-section">
+                        <!-- New post form elements go here -->
+                        <div class="new-post-title">
+                            <h3>Add new post here</h3>
+                        </div>
+                        <form id="newpost-form">
+                            <div class="mb-3">
+                                <label for="title">Title:</label>
+                                <input class="form-control" type="text" id="title" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="description">Description:</label>
+                                <textarea class="form-control" id="description" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="location">Location:</label>
+                                <input class="form-control" type="text" id="location" required>
+                            </div>
+                            <div>
+                                <label for="date">Date:</label>
+                                <input class="form-control" type="date" id="date" required>
+                            </div>
+                            <div>
+                                <label for="image">Image URL:</label>
+                                <input class="form-control" type="text" id="image" required>
+                            </div>
+                            <div class="new-post-button"><button type="submit" id="submit-post-btn">Submit</button></div>
+                        </form>
+                    </div>
+                </section>
+                <!-- Posts List Section -->
+                <section id="posts-list">
+                    <h2>All Posts</h2>
+                    <div id="posts" class="row">
+                        <div
+                            class="col-12 each-post"
+                            style="margin-bottom: 50px">
+                            <div
+                                class="post card">
+                                <div class="row">
+                                    <div class="col-3 post-image">
+                                        <img
+                                            src
+                                            class="card-img-left"
+                                            alt="Post image"
+                                            style="width: 200px; height: 100%" />
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="card-body">
+                                            <h3>Post title</h3>
+                                            <p>Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit. At
+                                                fugit
+                                                sed quae saepe, numquam
+                                                quibusdam
+                                                rerum id pariatur doloribus esse
+                                                dicta similique officiis
+                                                molestias
+                                                tempora quos ex voluptatem
+                                                consectetur reiciendis.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /card -->
+                                <a
+                                    href
+                                    target="_blank"
+                                    class="btn btn-primary">View Post</a>
+                            </div>
+                        </div>
+                        <div
+                            class="col-12 each-post"
+                            style="margin-bottom: 50px">
+                            <div
+                                class="post card post-card">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img
+                                            src=""
+                                            class="card-img-left"
+                                            alt="Post image"
+                                            style="width: 200px; height: 100%" />
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="card-body">
+                                            <h3>Post title</h3>
+                                            <p>Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit. At
+                                                fugit
+                                                sed quae saepe, numquam
+                                                quibusdam
+                                                rerum id pariatur doloribus esse
+                                                dicta similique officiis
+                                                molestias
+                                                tempora quos ex voluptatem
+                                                consectetur reiciendis.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /card -->
+                                <a
+                                    href=""
+                                    target="_blank"
+                                    class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <!-- The posts will be populated here via JavaScript -->
+                    </section>
+                </main>
+            </section>
+
+                <!-- ======= Footer ======= -->
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="copyright-box">
+                <p class="copyright">
+                  &copy; Copyright <strong>Fan Zhou</strong>. All Rights Reserved
+                </p>
+                <div class="credits">Designed by <a href="#">Fan Zhou</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End  Footer -->
+
+            <script src="js/script.js"></script>
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                crossorigin="anonymous"></script>
+        </body>
+    </html>
