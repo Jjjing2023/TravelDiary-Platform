@@ -335,7 +335,7 @@ function displayPosts() {
                                     </div>
                                 </div>
                                 <!-- /card -->
-                                <button onclick="viewPostDetails('${post._id}')">View Details</button>
+                                <button class="btn btn-primary" onclick="viewPostDetails('${post._id}')">View Details</button>
                             </div>
                         </div>
             `;
