@@ -3,7 +3,7 @@ function signupUser() {
   const email = document.getElementById("signup-email").value;
   const password = document.getElementById("signup-password").value;
 
-  fetch("http://localhost:3000/user/signup", {
+  fetch("/user/signup", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

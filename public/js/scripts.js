@@ -4,7 +4,7 @@ function loginUser() {
   const password = document.getElementById("login-password").value;
   const messageElement = document.getElementById("login-message");
 
-  fetch("http://localhost:3000/user/login", {
+  fetch("/user/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -89,7 +89,7 @@ function fetchMyPosts() {
   }
   // Fetch each post one by one using Promise.all
   const fetchPromises = userPosts.map((postId) =>
-    fetch(`http://localhost:3000/posts/${postId}`)
+    fetch(`/posts/${postId}`)
   );
 
   Promise.all(fetchPromises)
@@ -207,7 +207,7 @@ function renderPosts(posts, isMyPosts = false) {
         const updatedDate = e.target.elements.date.value;
         const updatedImage = e.target.elements.image.value;
 
-        fetch(`http://localhost:3000/posts/${post.post._id}`, {
+        fetch(`/posts/${post.post._id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -253,7 +253,7 @@ document
     // This should be stored in a more globally accessible place or in local storage/session storage.
     const user = localStorage.getItem("userId");
 
-    fetch("http://localhost:3000/posts", {
+    fetch("/posts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -276,7 +276,7 @@ document
 
 // Function to delete a post
 function deletePost(postId) {
-  fetch(`http://localhost:3000/posts/${postId}`, {
+  fetch(`/posts/${postId}`, {
     method: "DELETE",
   })
     .then((response) => {
@@ -306,7 +306,7 @@ function deletePost(postId) {
 
 // Function to fetch and display all posts
 function displayPosts() {
-  fetch("http://localhost:3000/posts")
+  fetch("/posts")
     .then((response) => response.json())
     .then((data) => {
       const postsSection = document.getElementById("posts-list");
@@ -349,7 +349,7 @@ function viewPostDetails(postId) {
 }
 
 function fetchPostDetails(postId) {
-  fetch(`http://localhost:3000/posts/${postId}`)
+  fetch(`/posts/${postId}`)
     .then((response) => response.json())
     .then((data) => {
       const postDetailsSection = document.getElementById("post-details");
