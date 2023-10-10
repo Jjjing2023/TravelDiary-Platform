@@ -1,7 +1,7 @@
 # TravelDiary-Platform 🌍✈️📖
 This is a platform for share your travel diary.(CS5610 project2).
 The Travel Diary Platform is a web application where users can register, log in, and post details about their travels. 
-![image]()
+![image](https://unknownfanzh.github.io/TravelDiary-Platform/public/images/screenshot.gif)
 - Author: Fan Zhou & Tianjing(Jill) Liu
 - Design Doc: https://drive.google.com/file/d/1q6o_AIC588qLvTXcs4i8LzHas-Erhb3c/view?usp=sharing
 - Prensentation slides: 
