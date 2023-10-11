@@ -4,8 +4,8 @@ The Travel Diary Platform is a web application where users can register, log in,
 ![image](https://unknownfanzh.github.io/TravelDiary-Platform/public/images/screenshot.gif)
 - Author: Fan Zhou & Tianjing(Jill) Liu
 - Design Doc: https://drive.google.com/file/d/1q6o_AIC588qLvTXcs4i8LzHas-Erhb3c/view?usp=sharing
-- Prensentation slides: 
-- Video walkthrough: 
+- Prensentation slides: https://docs.google.com/presentation/d/1z7PrsJyTVHzY1G6azjd5I7nNBWcZocoszvcLT7PE5hQ/edit#slide=id.gcb9a0b074_1_213
+- Video walkthrough: https://youtu.be/ZwDivI4WMEs
 - Wireframe: https://www.figma.com/file/7sZQ3r6xg8bVxAsWEm6H5h/Project2
 - A project from course CS5610: https://johnguerra.co/classes/webDevelopment_fall_2023/
 - Deployed here: https://traveldiary-platform-fc482b21bd8f.herokuapp.com/
