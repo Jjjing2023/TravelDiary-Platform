@@ -1,8 +1,8 @@
 // Login function
 function loginUser() {
-  const email = document.getElementById("login-email").value;
-  const password = document.getElementById("login-password").value;
-  const messageElement = document.getElementById("login-message");
+  const email = document.querySelector("#login-email").value;
+  const password = document.querySelector("#login-password").value;
+  const messageElement = document.querySelector("#login-message");
 
   fetch("/user/login", {
     method: "POST",
@@ -32,9 +32,9 @@ function loginUser() {
       if (data.posts) {
         localStorage.setItem("userPosts", JSON.stringify(data.posts));
       }
-      document.getElementById("login-section").style.display = "none";
-      document.getElementById("welcome-section").style.display = "block";
-      document.getElementById("username-display").textContent = data.name;
+      document.querySelector("#login-section").style.display = "none";
+      document.querySelector("#welcome-section").style.display = "block";
+      document.querySelector("#username-display").textContent = data.name;
       messageElement.textContent = "Successfully logged in!";
       messageElement.style.color = "green";
 
@@ -53,9 +53,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   if (userId && userName) {
     // Update UI to show that the user is logged in
-    document.getElementById("login-section").style.display = "none";
-    document.getElementById("welcome-section").style.display = "block";
-    document.getElementById("username-display").textContent = userName; // Displaying user ID for now, replace with username if available
+    document.querySelector("#login-section").style.display = "none";
+    document.querySelector("#welcome-section").style.display = "block";
+    document.querySelector("#username-display").textContent = userName; // Displaying user ID for now, replace with username if available
   }
 });
 
@@ -65,14 +65,14 @@ function logoutUser() {
   localStorage.removeItem("userName");
   localStorage.removeItem("userPosts");
   // Update UI to show that the user is logged out
-  document.getElementById("login-section").style.display = "block";
-  document.getElementById("welcome-section").style.display = "none";
+  document.querySelector("#login-section").style.display = "block";
+  document.querySelector("#welcome-section").style.display = "none";
   window.location.href = "./"; // Redirect to the login page
 }
 
 // Function to display the new post form
-document.getElementById("newpost-btn").addEventListener("click", function () {
-  document.getElementById("newpost-section").style.display = "block";
+document.querySelector("#newpost-btn").addEventListener("click", function () {
+  document.querySelector("#newpost-section").style.display = "block";
 });
 
 // Function to fetch and display my posts
@@ -102,7 +102,7 @@ function fetchMyPosts() {
 
 // Function to render posts
 function renderPosts(posts, isMyPosts = false) {
-  const postsSection = document.getElementById("posts-list");
+  const postsSection = document.querySelector("#posts-list");
   postsSection.innerHTML = "<h2>My posts</h2>"; // Clear current posts
   posts.forEach((post) => {
     if (post && post.post) {
@@ -235,15 +235,15 @@ function renderPosts(posts, isMyPosts = false) {
 
 // Function to add a new post
 document
-  .getElementById("newpost-form")
+  .querySelector("#newpost-form")
   .addEventListener("submit", function (event) {
     event.preventDefault(); // To prevent the default form submission behavior
 
-    const title = document.getElementById("title").value;
-    const description = document.getElementById("description").value;
-    const location = document.getElementById("location").value;
-    const date = document.getElementById("date").value;
-    const image = document.getElementById("image").value;
+    const title = document.querySelector("#title").value;
+    const description = document.querySelector("#description").value;
+    const location = document.querySelector("#location").value;
+    const date = document.querySelector("#date").value;
+    const image = document.querySelector("#image").value;
 
 
     const user = localStorage.getItem("userId");
@@ -300,7 +300,7 @@ function displayPosts() {
   fetch("/posts")
     .then((response) => response.json())
     .then((data) => {
-      const postsSection = document.getElementById("posts-list");
+      const postsSection = document.querySelector("#posts-list");
       postsSection.innerHTML = "<h2>All Posts</h2>"; // Clear current posts
       const posts = data.posts;
       posts.forEach((post) => {
@@ -344,7 +344,7 @@ function fetchPostDetails(postId) {
   fetch(`/posts/${postId}`)
     .then((response) => response.json())
     .then((data) => {
-      const postDetailsSection = document.getElementById("post-details");
+      const postDetailsSection = document.querySelector("#post-details");
 
       postDetailsSection.innerHTML = `
       <div id="post-detail" class="row">

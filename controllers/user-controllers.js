@@ -3,7 +3,7 @@ const { compareSync } = pkg;
 const { hashSync } = pkg;
 import { User } from "../models/User.js";
 import { ObjectId } from "mongodb";
-import { getPostsCollection } from "../models/db.js"; // <-- Import getUsersCollection from db.js
+import { getPostsCollection } from "../db/db.js"; // <-- Import getUsersCollection from db.js
 
 
 export const getAllUsers = async (req, res) => {

@@ -1,5 +1,5 @@
 import { ObjectId } from "mongodb";
-import { getUsersCollection } from "./db.js"; // <-- Import getUsersCollection from db.js
+import { getUsersCollection } from "../db/db.js"; // <-- Import getUsersCollection from db.js
 
 export const find = async () => {
   const usersCollection = await getUsersCollection();

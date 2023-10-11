@@ -1,7 +1,7 @@
 function signupUser() {
-  const name = document.getElementById("signup-name").value;
-  const email = document.getElementById("signup-email").value;
-  const password = document.getElementById("signup-password").value;
+  const name = document.querySelector("#signup-name").value;
+  const email = document.querySelector("#signup-email").value;
+  const password = document.querySelector("#signup-password").value;
 
   fetch("/user/signup", {
     method: "POST",

@@ -1,7 +1,7 @@
 import { ObjectId } from "mongodb";
 import { getUsersCollection } from "./db.js"; // <-- Import getUsersCollection from db.js
 import { getPostsCollection } from "./db.js"; // <-- Import getUsersCollection from db.js
-import { client } from "./db.js";
+import { client } from "../db/db.js";
 
 export const getAllPosts = async () => {
   const postsCollection = await getPostsCollection();
