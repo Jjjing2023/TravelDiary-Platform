@@ -24,15 +24,12 @@ function loginUser() {
       console.log("Response data:", data);
       console.log(data);
       if (data.id) {
-        // Assuming `data.id` contains the user's ID from the login response
         localStorage.setItem("userId", data.id);
       }
       if (data.name) {
-        // Assuming `data.id` contains the user's ID from the login response
         localStorage.setItem("userName", data.name);
       }
       if (data.posts) {
-        // Assuming `data.id` contains the user's ID from the login response
         localStorage.setItem("userPosts", JSON.stringify(data.posts));
       }
       document.getElementById("login-section").style.display = "none";
@@ -41,7 +38,6 @@ function loginUser() {
       messageElement.textContent = "Successfully logged in!";
       messageElement.style.color = "green";
 
-      // Handle other actions upon successful login, if any
     })
     .catch((error) => {
       console.error("Error:", error);
@@ -79,7 +75,7 @@ document.getElementById("newpost-btn").addEventListener("click", function () {
   document.getElementById("newpost-section").style.display = "block";
 });
 
-// Function to fetch and display all posts
+// Function to fetch and display my posts
 function fetchMyPosts() {
   const userPosts = JSON.parse(localStorage.getItem("userPosts"));
 
@@ -197,7 +193,7 @@ function renderPosts(posts, isMyPosts = false) {
       `;
       postDiv.appendChild(editForm);
 
-      // Handle form submission
+      // Handle edit form submission
       editForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
@@ -249,8 +245,7 @@ document
     const date = document.getElementById("date").value;
     const image = document.getElementById("image").value;
 
-    // Assuming `data.id` contains the user's ID from the login function
-    // This should be stored in a more globally accessible place or in local storage/session storage.
+
     const user = localStorage.getItem("userId");
 
     fetch("/posts", {
@@ -268,8 +263,6 @@ document
         userPosts.push(newPost.post._id);
         localStorage.setItem("userPosts", JSON.stringify(userPosts));
         fetchMyPosts();
-        // Handle the response, e.g. show a success message or reset the form
-        // document.getElementById('newpost-form').reset();
       })
       .catch((error) => console.error("Error:", error));
   });
@@ -288,7 +281,6 @@ function deletePost(postId) {
 
         alert("Post deleted successfully");
 
-        // Optionally, refresh the posts list after a successful delete:
         fetchMyPosts();
       } else {
         return response.json().then((err) => {
@@ -302,7 +294,6 @@ function deletePost(postId) {
     });
 }
 
-// Function to edit a post
 
 // Function to fetch and display all posts
 function displayPosts() {
@@ -344,6 +335,7 @@ function displayPosts() {
     .catch((error) => console.error("Error fetching posts:", error));
 }
 
+// Go to post details page
 function viewPostDetails(postId) {
   window.location.href = `post-details.html?id=${postId}`;
 }
