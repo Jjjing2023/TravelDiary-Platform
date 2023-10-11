@@ -8,7 +8,7 @@ The Travel Diary Platform is a web application where users can register, log in,
 - Video walkthrough: https://youtu.be/ZwDivI4WMEs
 - Wireframe: https://www.figma.com/file/7sZQ3r6xg8bVxAsWEm6H5h/Project2
 - A project from course CS5610: https://johnguerra.co/classes/webDevelopment_fall_2023/
-- Deployed here: https://traveldiary-platform-fc482b21bd8f.herokuapp.com/
+- Deployed here: [https://traveldiary-platform-fc482b21bd8f.herokuapp.com/](https://travel-diary-platform.onrender.com)
 
 ## Project Objective
 The Travel Diary Platform is a web application where users can register, log in, and post details about their travels. Users can upload images(url), describe the location, date, and provide a brief description of their travel experiences. They can also edit and delete their posts, and view details about specific trips.
