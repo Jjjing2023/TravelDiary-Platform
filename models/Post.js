@@ -18,10 +18,7 @@ const getPostById = async (id) => {
   return await postsCollection.findOne({ _id: new ObjectId(id) });
 };
 
-// const addPost = async (postData) => {
-//     const postsCollection = await getPostsCollection();
-//     return await postsCollection.insertOne(postData);
-// };
+
 export const addPost = async (postData) => {
   const postsCollection = await getPostsCollection();
   return await postsCollection.insertOne(postData);
@@ -59,7 +56,7 @@ export const addPostWithUserUpdate = async (postData) => {
       throw new Error("Post creation failed!");
     }
 
-    const usersCollection = await getUsersCollection(); // Assuming you've exported this function from db.js
+    const usersCollection = await getUsersCollection(); 
     const userUpdateResult = await usersCollection.updateOne(
       { _id: new ObjectId(postData.user) },
       { $push: { posts: postResult.insertedId } },
