@@ -116,14 +116,14 @@ function renderPosts(posts, isMyPosts = false) {
     <div
         class="post card">
         <div class="row">
-            <div class="col-3 post-image">
+            <div class="col-lg-3 col-sm-12 post-image">
                 <img
                     src="${post.post.image}"
                     class="card-img-left"
                     alt="Post image"
                     style="width: 200px; height: 100%" />
             </div>
-            <div class="col-7">
+            <div class="col-lg-7 col-sm-12">
                 <div class="card-body">
                     <h3>${post.post.title}</h3>
                     <p>${post.post.description}</p>
@@ -311,14 +311,14 @@ function displayPosts() {
                             <div
                                 class="post card">
                                 <div class="row">
-                                    <div class="col-3 post-image">
+                                    <div class="col-lg-3 col-sm-12 post-image">
                                         <img
                                             src="${post.image}"
                                             class="card-img-left"
                                             alt="Post image"
                                             style="width: 200px; height: 100%" />
                                     </div>
-                                    <div class="col-7">
+                                    <div class="col-lg-7 col-sm-12">
                                         <div class="card-body">
                                             <h3>${post.title}</h3>
                                             <p>${post.description}</p>
