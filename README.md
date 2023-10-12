@@ -82,6 +82,9 @@ The website is hosted using heroku and can be accessed [here]().
 ## Configuration 🛠️
 
 Ensure you have a .env file in the root directory with the following content:
+```
+MONGODB_PASSWAOORD = <Your MONGODB password>
+```
 
 ## License
 Distributed under the MIT License. See `LICENSE` for more information.
