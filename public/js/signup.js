@@ -32,4 +32,5 @@ function signupUser() {
       // Handle any errors that occurred during fetch or while handling the response
       alert(error.message || "An error occurred.");
     });
+    document.querySelector("#signup-btn").addEventListener("click", signupUser);
 }
