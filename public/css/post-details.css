@@ -1,0 +1,118 @@
+/*--------------------------------------------------------------
+# Post Detail Section
+--------------------------------------------------------------*/
+#post-details {
+  margin: 50px 50px;
+}
+
+#post-details .post-image img {
+  max-height: 500px;
+  max-width: 380px;
+}
+
+#post-details .post-content h3 {
+  font-size: 3.125rem;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+  text-align: center;
+  color: #fff;
+  padding: 25px 0;
+  background: #0062d3;
+}
+
+footer .copyright {
+  margin-bottom: 0.3rem;
+}
+
+footer .credits {
+  margin-bottom: 0;
+}
+
+footer .credits a {
+  color: #fff;
+}
+
+/* front */
+.navbar-brand {
+  font-family: "Sacramento", cursive;
+}
+h1 {
+  font-size: 5.625rem;
+  font-family: "Sacramento", cursive;
+}
+
+/*--------------------------------------------------------------
+  # Header Section
+  --------------------------------------------------------------*/
+.header {
+  overflow: hidden;
+  background-color: black;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  opacity: 0.8;
+  z-index: 999;
+}
+
+.navbar {
+  background-color: black;
+}
+
+/*--------------------------------------------------------------
+  # Hero Section
+  --------------------------------------------------------------*/
+body,
+html {
+  height: 100%;
+}
+
+.hero-image-single {
+  background-image: linear-gradient(
+      rgba(0, 85, 255, 0.5),
+      rgba(0, 85, 255, 0.5)
+    ),
+    url("/images/overlay-bg.jpg");
+  /* Set a specific height */
+  height: 70%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/*--------------------------------------------------------------
+# login Section
+--------------------------------------------------------------*/
+
+#welcome-section p {
+    color: white;
+    margin-bottom: 0;
+  }
+  #welcome-section span {
+    margin-right: 5px;
+  }
+  
+  #newpost-form > div.new-post-button {
+    text-align: center;
+  }
+  
+  .new-post-title {
+    text-align: center;
+  }
+  

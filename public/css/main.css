@@ -48,21 +48,6 @@ html {
   position: relative;
 }
 
-.hero-image-single {
-  background-image: linear-gradient(
-      rgba(0, 85, 255, 0.5),
-      rgba(0, 85, 255, 0.5)
-    ),
-    url("/images/overlay-bg.jpg");
-  /* Set a specific height */
-  height: 70%;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
 
 /* Place text in the middle of the image */
 .hero-text {
@@ -151,20 +136,4 @@ footer .credits {
 
 footer .credits a {
   color: #fff;
-}
-
-/*--------------------------------------------------------------
-# Post Detail Section
---------------------------------------------------------------*/
-#post-details {
-  margin: 50px 50px;
-}
-
-#post-details .post-image img {
-  max-height: 500px;
-  max-width: 380px;
-}
-
-#post-details .post-content h3 {
-  font-size: 3.125rem;
 }
