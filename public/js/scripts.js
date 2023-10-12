@@ -37,7 +37,6 @@ function loginUser() {
       document.querySelector("#username-display").textContent = data.name;
       messageElement.textContent = "Successfully logged in!";
       messageElement.style.color = "green";
-
     })
     .catch((error) => {
       console.error("Error:", error);
@@ -84,9 +83,7 @@ function fetchMyPosts() {
     return;
   }
   // Fetch each post one by one using Promise.all
-  const fetchPromises = userPosts.map((postId) =>
-    fetch(`/posts/${postId}`)
-  );
+  const fetchPromises = userPosts.map((postId) => fetch(`/posts/${postId}`));
 
   Promise.all(fetchPromises)
     .then((responses) => Promise.all(responses.map((r) => r.json())))
@@ -245,7 +242,6 @@ document
     const date = document.querySelector("#date").value;
     const image = document.querySelector("#image").value;
 
-
     const user = localStorage.getItem("userId");
 
     fetch("/posts", {
@@ -293,7 +289,6 @@ function deletePost(postId) {
       alert(error.message || "Error deleting post.");
     });
 }
-
 
 // Function to fetch and display all posts
 function displayPosts() {
@@ -371,5 +366,18 @@ function fetchPostDetails(postId) {
     })
     .catch((error) => console.error("Error fetching post details:", error));
 }
+
+// button controller
+document.querySelector("#allPostsLink").addEventListener("click", function () {
+  window.location.reload(true);
+});
+document.querySelector("#allPostsLink2").addEventListener("click", function () {
+  window.location.reload(true);
+});
+document.querySelector("#loginButton").addEventListener("click", loginUser);
+document.querySelector("#my-posts-btn").addEventListener("click", fetchMyPosts);
+document.querySelector("#refresh").addEventListener("click", fetchMyPosts);
+document.querySelector("#logout-btn").addEventListener("click", logoutUser);
+
 // Load posts when the page loads
 window.onload = displayPosts;

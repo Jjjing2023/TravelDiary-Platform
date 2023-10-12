@@ -37,19 +37,20 @@
                                     <a class="nav-link" href="./">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./#posts-list"
-                                        onclick="window.location.reload(true);">All
+                                    <a class="nav-link" id="allPostsLink"
+                                        href="./#posts-list">All
                                         posts</a>
                                 </li>
                             </ul>
-                            <ul class="navbar-nav ms-md-auto" id="right-nav-item">
+                            <ul class="navbar-nav ms-md-auto"
+                                id="right-nav-item">
                                 <li class="login" id="login-section">
                                     <input type="email" id="login-email"
                                         placeholder="Email">
                                     <input type="password" id="login-password"
                                         placeholder="Password">
                                     <button class="btn btn-primary"
-                                        onclick="loginUser()">Login</button>
+                                        id="loginButton">Login</button>
                                     <a
                                         href="/signup.html"
                                         target="_blank"
@@ -58,15 +59,12 @@
                                 </li>
                                 <li id="welcome-section" style="display: none;">
                                     <p>Welcome, <span id="username-display"></span><span>
-                                            <button id="my-posts-btn"
-                                                onclick="fetchMyPosts()">My
+                                            <button id="my-posts-btn">My
                                                 Posts</button>
-                                            <button id="refresh"
-                                                onclick="fetchMyPosts()">Refresh</button>
+                                            <button id="refresh">Refresh</button>
                                             <a href="#newpost-section"><button
                                                     id="newpost-btn">New Post</button></a>
-                                            <button id="logout-btn"
-                                                onclick="logoutUser()">Log Out</button>
+                                            <button id="logout-btn">Log Out</button>
                                         </span></p>
                                 </li>
                             </ul>
@@ -81,8 +79,8 @@
             <div class="hero-text">
                 <h1>Travel Diary</h1>
                 <p>To share your travel.</p>
-                <a class="btn btn-primary" href="#posts-list"
-                    onclick="window.location.reload(true);" role="button">All
+                <a class="btn btn-primary" href="#posts-list" id="allPostsLink2"
+                    role="button">All
                     posts</a>
             </div>
         </div>
