@@ -25,7 +25,7 @@ function signupUser() {
       if (data.user) {
         // If there's a user property in the response, signup was successful
         alert("Signup successful!");
-        window.location.href = "/index.html"; // Redirect to the login page
+        window.location.href = "/index.html"; // Redirect to the home page
       }
     })
     .catch((error) => {
