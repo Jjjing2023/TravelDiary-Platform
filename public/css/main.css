@@ -1,12 +1,11 @@
 /* front */
 .navbar-brand {
-  font-family: 'Sacramento', cursive;
+  font-family: "Sacramento", cursive;
 }
 h1 {
   font-size: 5.625rem;
-  font-family: 'Sacramento', cursive;
+  font-family: "Sacramento", cursive;
 }
-
 
 /*--------------------------------------------------------------
 # Header Section
@@ -25,18 +24,19 @@ h1 {
   background-color: black;
 }
 
-
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-body, html {
-    height: 100%;
+body,
+html {
+  height: 100%;
 }
 
 /* The hero image */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/hero-bg.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/hero-bg.jpeg");
 
   /* Set a specific height */
   height: 100%;
@@ -49,9 +49,13 @@ body, html {
 }
 
 .hero-image-single {
-  background-image: linear-gradient(rgba(0, 85, 255, 0.5), rgba(0, 85, 255, 0.5)), url("/images/overlay-bg.jpg");
+  background-image: linear-gradient(
+      rgba(0, 85, 255, 0.5),
+      rgba(0, 85, 255, 0.5)
+    ),
+    url("/images/overlay-bg.jpg");
   /* Set a specific height */
-  height: 50%;
+  height: 70%;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -70,33 +74,31 @@ body, html {
   color: white;
 }
 
-
 /*--------------------------------------------------------------
 # login Section
 --------------------------------------------------------------*/
 
 #welcome-section p {
-    color: white;
-    margin-bottom: 0;
+  color: white;
+  margin-bottom: 0;
 }
 #welcome-section span {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 #newpost-form > div.new-post-button {
-    text-align:center;
+  text-align: center;
 }
 
 .new-post-title {
-    text-align:center;
+  text-align: center;
 }
-
 
 /*--------------------------------------------------------------
 # New post Section
 --------------------------------------------------------------*/
 .new-post-section {
-    margin: 50px 50px;
+  margin: 50px 50px;
 }
 
 /*--------------------------------------------------------------
@@ -104,72 +106,65 @@ body, html {
 --------------------------------------------------------------*/
 
 #posts-list {
-    text-align: center;
-    margin: 50px 50px;
+  text-align: center;
+  margin: 50px 50px;
 }
-#posts-list h2{
-    margin-bottom: 50px;
+#posts-list h2 {
+  margin-bottom: 50px;
 }
 
-.each-post img{
-    width: 100%;
-    height: 200px;
-    max-height: 250px;    
+.each-post img {
+  width: 100%;
+  height: 200px;
+  max-height: 250px;
 }
 
 .each-post .post-image {
-    margin: 15px 15px;
+  margin: 15px 15px;
 }
 
-#posts-list .each-post{
-    margin: 10px 5px;
+#posts-list .each-post {
+  margin: 10px 5px;
 }
 
 .post {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 footer {
-    text-align: center;
-    color: #fff;
-    padding: 25px 0;
-    background: #0062d3;
-  }
-  
-  footer .copyright {
-    margin-bottom: 0.3rem;
-  }
-  
-  footer .credits {
-    margin-bottom: 0;
-  }
-  
-  footer .credits a {
-    color: #fff;
-  }
-  
-  /*--------------------------------------------------------------
+  text-align: center;
+  color: #fff;
+  padding: 25px 0;
+  background: #0062d3;
+}
+
+footer .copyright {
+  margin-bottom: 0.3rem;
+}
+
+footer .credits {
+  margin-bottom: 0;
+}
+
+footer .credits a {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
 # Post Detail Section
 --------------------------------------------------------------*/
 #post-details {
-    margin: 50px 50px;
+  margin: 50px 50px;
 }
 
 #post-details .post-image img {
-    max-height: 500px;
-    max-width: 380px;
+  max-height: 500px;
+  max-width: 380px;
 }
 
-#post-details .post-content h3{
+#post-details .post-content h3 {
   font-size: 3.125rem;
-}
-
-#post-details .post-footer {
-  position: absolute;
-  bottom: 0px;
-  margin-right: auto;
-  margin-left: auto;
 }

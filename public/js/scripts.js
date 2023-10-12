@@ -347,19 +347,25 @@ function fetchPostDetails(postId) {
       const postDetailsSection = document.querySelector("#post-details");
 
       postDetailsSection.innerHTML = `
+      <div
+                                class="post card">
       <div id="post-detail" class="row">
       <div
-          class="col-lg-4 post-image">
+          class="col-lg-4 col-md-12 col-sm-12 post-image">
           <img src="${data.post.image}" alt="post image: ${data.post.title}" />
           </div>
           <div
-          class="col-lg-8 post-content">
+          class="col-lg-8 col-md-12 col-sm-12 post-content">
+          <div class="card-body">
           <h3>${data.post.title}</h3>
+          
                           <p>${data.post.description}</p>
-                          <div class="post-footer">
+                          
+                          
                           <p>Location: ${data.post.location}</p>
             <p>Date: ${new Date(data.post.date).toLocaleDateString()}</p>
             </div>
+          </div>
           </div>
         `;
     })
