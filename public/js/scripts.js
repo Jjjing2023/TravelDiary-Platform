@@ -378,6 +378,9 @@ document.querySelector("#loginButton").addEventListener("click", loginUser);
 document.querySelector("#my-posts-btn").addEventListener("click", fetchMyPosts);
 document.querySelector("#refresh").addEventListener("click", fetchMyPosts);
 document.querySelector("#logout-btn").addEventListener("click", logoutUser);
+document.querySelector("#signupButton").addEventListener("click", function(){
+  document.location.href = '/signup.html';
+});
 
 // Load posts when the page loads
 window.onload = displayPosts;
