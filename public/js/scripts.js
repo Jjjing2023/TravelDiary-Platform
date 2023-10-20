@@ -370,6 +370,11 @@ function fetchPostDetails(postId) {
 // button controller
 document.querySelector("#allPostsLink2").addEventListener("click", function () {
   window.location.href = "/#posts-list";
+  window.location.reload();
+});
+document.querySelector("#allPostsLink").addEventListener("click", function () {
+  window.location.href = "/#posts-list";
+  window.location.reload();
 });
 document.querySelector("#loginButton").addEventListener("click", loginUser);
 document.querySelector("#my-posts-btn").addEventListener("click", fetchMyPosts);
