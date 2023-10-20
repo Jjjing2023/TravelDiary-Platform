@@ -368,19 +368,15 @@ function fetchPostDetails(postId) {
 }
 
 // button controller
-document.querySelector("#allPostsLink").addEventListener("click", function () {
-  window.location.reload(true);
-});
 document.querySelector("#allPostsLink2").addEventListener("click", function () {
-  window.location.reload(true);
+  window.location.href = "/#posts-list";
 });
 document.querySelector("#loginButton").addEventListener("click", loginUser);
 document.querySelector("#my-posts-btn").addEventListener("click", fetchMyPosts);
 document.querySelector("#refresh").addEventListener("click", fetchMyPosts);
 document.querySelector("#logout-btn").addEventListener("click", logoutUser);
 document.querySelector("#signupButton").addEventListener("click", function(){
-  document.location.href = '/signup.html';
+  document.location.href = "/signup.html";
 });
-
 // Load posts when the page loads
 window.onload = displayPosts;
